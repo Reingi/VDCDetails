@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#025aa9</color>
+    <color name="colorPrimaryDark">#003279</color>
+    <color name="colorAccent">#5386db</color>
+
+    <color name="white">#FFFFFF</color>
+
+    <!-- 1st Gradient color -->
+    <color name="colorBlue_A400">#025aa9</color>
+    <color name="colorBlue_900">#003279</color>
+
+    <color name="black_overlay">#66000000</color>
+    <!-- ./ 1st Gradient color -->
+</resources>
