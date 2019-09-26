@@ -5,7 +5,33 @@
     <string name="login">Login</string>
     <string name="pass">Password</string>
 
-    <string name="title_activity_fullscreen">FullscreenActivity</string>
-    <string name="dummy_button">Dummy Button</string>
-    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="back">BACK</string>
+    <string name="next">NEXT</string>
+    <string name="phoneno">Phone No</string>
+    <string name="email">Email Optional</string>
+    <string name="ageeng">Age</string>
+    <string name="houseno">घर न</string>
+    <string name="photo">फोटो</string>
+    <string name="tol">टोल:</string>
+    <string name="houseowner">घर मुलीको नाम</string>
+    <string name="age">उमेर:</string>
+    <string name="bloodgrp">रक्त समूह</string>
+    <string name="eduqualifi">शैक्षिक योग्यता</string>
+    <string name="occupation">पेशा</string>
+    <string name="religion">धर्म</string>
+    <string name="fathername">बुवाको नाम</string>
+    <string name="mothername">आमाको नाम</string>
+    <string name="grandfathername">हजुरबुबाको नाम</string>
+    <string name="spousename">पति / पत्नीको नाम</string>
+    <string name="isabroad">विदेशमा हुनुहुन्छ भने</string>
+    <string name="npyes">छ</string>
+    <string name="npno">छैन</string>
+    <string name="abroadfrom">कति वर्ष देखि हुनुहुन्छ</string>
+    <string name="typeofhouse">घरको किसिम</string>
+    <string name="kachi">कच्ची</string>
+    <string name="halfpakki">अर्ध पक्कि</string>
+    <string name="pakki">पक्कि</string>
+    <string name="aboutland">जग्गाको विवरण</string>
+
+
 </resources>

@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tol"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <EditText
+                android:id="@+id/ettol"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/tol"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/gharno"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@+id/tol"
+            app:layout_constraintStart_toStartOf="@+id/tol"
+            app:layout_constraintTop_toBottomOf="@+id/tol">
+
+            <EditText
+                android:id="@+id/etgharno"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/houseno"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/houseowner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/gharno"
+            app:layout_constraintTop_toBottomOf="@+id/gharno">
+
+            <EditText
+                android:id="@+id/ethouseowner"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/houseowner"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/houseowner">
+
+            <EditText
+                android:id="@+id/etage"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/age"
+                android:inputType="number"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/religion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/age"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toTopOf="@+id/age">
+
+            <EditText
+                android:id="@+id/etreligion"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/religion"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/fathername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintWidth_percent="0.5"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/age">
+
+            <EditText
+                android:id="@+id/etfathername"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/fathername"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/grandfathername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintBottom_toBottomOf="@+id/fathername"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/fathername"
+            app:layout_constraintTop_toTopOf="@+id/fathername">
+
+            <EditText
+                android:id="@+id/edgrandfathername"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/grandfathername"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/spouse"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fathername">
+
+            <EditText
+                android:id="@+id/edspouse"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/spousename"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/isabroad"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spouse" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/npyes" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/npno" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/abroadprofession"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/radioGroup">
+
+            <EditText
+                android:id="@+id/etabroadprofession"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/occupation"
+                android:inputType="text"
+                android:singleLine="true" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/abroadfrom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abroadprofession">
+
+            <EditText
+                android:id="@+id/etabroadfrom"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/abroadfrom"
+                android:inputType="text"
+                android:maxLength="10"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/typeofhouse"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/abroadfrom" />
+
+        <RadioGroup
+            android:id="@+id/housetype"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2">
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/kachi" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/halfpakki" />
+
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:text="@string/pakki" />
+        </RadioGroup>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/aboutland"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/housetype">
+
+            <EditText
+                android:id="@+id/etaboutland"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/aboutland"
+                android:inputType="text"
+                android:maxLength="10"
+                android:singleLine="true" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/backBT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutland" />
+
+        <Button
+            android:id="@+id/nextBT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/next"
+            android:textColor="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/aboutland" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
