@@ -309,6 +309,7 @@
             android:id="@+id/backBT"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="@style/Widget.lakpa.Button"
             android:visibility="gone"
             android:text="@string/back"
             android:textColor="@color/white"
@@ -320,6 +321,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:text="@string/next"
+            style="@style/Widget.lakpa.Button"
             android:textColor="@color/white"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/aboutland" />
