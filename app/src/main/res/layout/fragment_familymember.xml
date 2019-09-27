@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    tools:context=".tenant"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_name"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/naam"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_age"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/member_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/member_name"
+            app:layout_constraintTop_toTopOf="@+id/member_name"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_age"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/age"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_occupation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_name"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_occupation"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/occupation"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_edu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/member_occupation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/member_occupation"
+            app:layout_constraintTop_toTopOf="@+id/member_occupation"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_edu"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/eduqualifi"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_relation"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_occupation"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_relation"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/relation"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_bloodgrp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/member_relation"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/member_relation"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_bloodgrp"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/bloodgrp"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_religion"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_bloodgrp"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_religion"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/religion"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/member_spouse"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/member_religion"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/member_religion"
+            app:layout_constraintWidth_percent="0.5">
+
+            <EditText
+                android:id="@+id/et_member_spouse"
+                android:layout_width="fill_parent"
+                android:layout_height="40.0dip"
+                android:hint="@string/spousename"
+                android:inputType="text"
+                android:maxLength="2"
+                android:singleLine="true"
+                android:textColor="#ff000000" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <Button
+            android:id="@+id/backBT"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/back"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/member_religion" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@+id/member_spouse"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

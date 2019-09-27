@@ -18,5 +18,30 @@
         android:id="@+id/adddetails"
         android:name="com.example.vdcdetails.Adddetails"
         android:label="Add Details"
-        tools:layout="@layout/activity_adddetails" />
+        tools:layout="@layout/activity_adddetails">
+    </activity>
+    <fragment
+        android:id="@+id/housedetails"
+        android:name="com.example.vdcdetails.Housedetails"
+        android:label="fragment_housedetails"
+        tools:layout="@layout/fragment_housedetails" >
+        <action
+            android:id="@+id/action_housedetails_to_familymember"
+            app:destination="@id/familymember" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/personaldetails"
+        android:name="com.example.vdcdetails.Personaldetails"
+        android:label="fragment_personaldetails"
+        tools:layout="@layout/fragment_personaldetails" >
+        <action
+            android:id="@+id/action_personaldetails_to_housedetails"
+            app:destination="@id/housedetails" />
+    </fragment>
+    <fragment
+        android:id="@+id/familymember"
+        android:name="com.example.vdcdetails.Familymember"
+        android:label="fragment_familymember"
+        tools:layout="@layout/fragment_familymember" />
 </navigation>

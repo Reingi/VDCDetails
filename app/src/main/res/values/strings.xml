@@ -1,20 +1,21 @@
 <resources>
-    <string name="app_name">VDCDetails</string>
-    <string name="username">Username</string>
-    <string name="save">Save</string>
-    <string name="login">Login</string>
-    <string name="pass">Password</string>
+    <string name="app_name">FormStepper</string>
 
     <string name="back">BACK</string>
     <string name="next">NEXT</string>
+    <string name="save">SAVE</string>
+
+
     <string name="phoneno">Phone No</string>
     <string name="email">Email Optional</string>
     <string name="ageeng">Age</string>
+
+    <string name="ownerimage">घर धनीको तस्विर</string>
     <string name="houseno">घर न</string>
     <string name="photo">फोटो</string>
-    <string name="tol">टोल:</string>
+    <string name="tol">टोल</string>
     <string name="houseowner">घर मुलीको नाम</string>
-    <string name="age">उमेर:</string>
+    <string name="age">उमेर</string>
     <string name="bloodgrp">रक्त समूह</string>
     <string name="eduqualifi">शैक्षिक योग्यता</string>
     <string name="occupation">पेशा</string>
@@ -32,6 +33,11 @@
     <string name="halfpakki">अर्ध पक्कि</string>
     <string name="pakki">पक्कि</string>
     <string name="aboutland">जग्गाको विवरण</string>
+    <string name="naam">नाम</string>
+    <string name="relation">घर मुली संगको नाता</string>
+    <string name="vdc_image">वडाको नक्सा अपलोड गर्नुहोस्</string>
 
 
+    <string name="familydetails">घर परिवारको बिस्तृत जानकारी</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

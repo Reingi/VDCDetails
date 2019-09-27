@@ -1,8 +1,8 @@
 package com.example.vdcdetails;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class Adddetails extends AppCompatActivity {
 
