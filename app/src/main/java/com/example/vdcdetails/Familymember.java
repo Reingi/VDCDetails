@@ -1,12 +1,15 @@
 package com.example.vdcdetails;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
@@ -18,7 +21,7 @@ import androidx.fragment.app.Fragment;
  * Use the {@link Familymember#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Familymember extends Fragment {
+public class Familymember extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -40,7 +43,7 @@ public class Familymember extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Familymember.
+     * @return A new instance of fragment tenant.
      */
     // TODO: Rename and change types and number of parameters
     public static Familymember newInstance(String param1, String param2) {
@@ -68,10 +71,42 @@ public class Familymember extends Fragment {
         return inflater.inflate(R.layout.fragment_familymember, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
+    private Button backBT;
+    private Button saveBT;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        backBT = view.findViewById(R.id.backBT);
+        saveBT = view.findViewById(R.id.save);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        backBT.setOnClickListener(this);
+        saveBT.setOnClickListener(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        backBT.setOnClickListener(null);
+        saveBT.setOnClickListener(null);
+    }
+
+    @Override
+    public void onClick(View view) {
+
+        switch (view.getId()) {
+            case R.id.backBT:
+                if (mListener != null)
+                    mListener.onBackPressed(this);
+                break;
+            case R.id.save:
+                if (mListener != null)
+                    Toast.makeText(getContext(), "Thanks For Registering", Toast.LENGTH_SHORT).show();
+                break;
         }
     }
 
@@ -92,6 +127,8 @@ public class Familymember extends Fragment {
         mListener = null;
     }
 
+
+
     /**
      * This interface must be implemented by activities that contain this
      * fragment to allow an interaction in this fragment to be communicated
@@ -104,6 +141,7 @@ public class Familymember extends Fragment {
      */
     public interface OnFragmentInteractionListener {
         // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onBackPressed(Fragment fragment);
+        void onSavePressed(Fragment fragment);
     }
 }

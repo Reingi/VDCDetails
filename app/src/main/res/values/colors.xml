@@ -9,7 +9,6 @@
     <!-- 1st Gradient color -->
     <color name="colorBlue_A400">#025aa9</color>
     <color name="colorBlue_900">#003279</color>
-
     <color name="black_overlay">#66000000</color>
     <!-- ./ 1st Gradient color -->
 </resources>

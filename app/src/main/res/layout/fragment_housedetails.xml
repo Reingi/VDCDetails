@@ -5,12 +5,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HouseDetails">
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    tools:context=".Housedetails">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/tol"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,7 +23,7 @@
         <EditText
             android:id="@+id/ettol"
             android:layout_width="fill_parent"
-            android:layout_height="40.0dip"
+            android:layout_height="wrap_content"
             android:hint="@string/tol"
             android:inputType="text"
             android:maxLength="2"
@@ -31,6 +35,8 @@
         android:id="@+id/gharno"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="@+id/tol"
         app:layout_constraintStart_toStartOf="@+id/tol"
         app:layout_constraintTop_toBottomOf="@+id/tol">
@@ -38,7 +44,7 @@
         <EditText
             android:id="@+id/etgharno"
             android:layout_width="fill_parent"
-            android:layout_height="40.0dip"
+            android:layout_height="wrap_content"
             android:hint="@string/houseno"
             android:inputType="text"
             android:maxLength="2"
@@ -86,6 +92,8 @@
         android:id="@+id/aboutland"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_margin="5dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/housetype">
@@ -93,7 +101,7 @@
         <EditText
             android:id="@+id/etaboutland"
             android:layout_width="fill_parent"
-            android:layout_height="40.0dip"
+            android:layout_height="wrap_content"
             android:hint="@string/aboutland"
             android:inputType="text"
             android:maxLength="10"
@@ -124,7 +132,6 @@
         android:id="@+id/backBT"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:visibility="gone"
         android:text="@string/back"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"

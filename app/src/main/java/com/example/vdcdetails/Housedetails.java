@@ -1,12 +1,14 @@
 package com.example.vdcdetails;
 
 import android.content.Context;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 
@@ -18,7 +20,7 @@ import androidx.fragment.app.Fragment;
  * Use the {@link Housedetails#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class Housedetails extends Fragment {
+public class Housedetails extends Fragment implements View.OnClickListener{
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -40,7 +42,7 @@ public class Housedetails extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment Housedetails.
+     * @return A new instance of fragment HouseDetails.
      */
     // TODO: Rename and change types and number of parameters
     public static Housedetails newInstance(String param1, String param2) {
@@ -68,11 +70,28 @@ public class Housedetails extends Fragment {
         return inflater.inflate(R.layout.fragment_housedetails, container, false);
     }
 
-    // TODO: Rename method, update argument and hook method into UI event
-    public void onButtonPressed(Uri uri) {
-        if (mListener != null) {
-            mListener.onFragmentInteraction(uri);
-        }
+    private Button backBT;
+    private Button nextBT;
+
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
+        backBT = view.findViewById(R.id.backBT);
+        nextBT = view.findViewById(R.id.nextBT);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        backBT.setOnClickListener(this);
+        nextBT.setOnClickListener(this);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        backBT.setOnClickListener(null);
+        nextBT.setOnClickListener(null);
     }
 
     @Override
@@ -90,6 +109,23 @@ public class Housedetails extends Fragment {
     public void onDetach() {
         super.onDetach();
         mListener = null;
+        backBT=null;
+        nextBT=null;
+    }
+
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()) {
+            case R.id.backBT:
+                if (mListener != null)
+                    mListener.onBackPressed(this);
+                break;
+
+            case R.id.nextBT:
+                if (mListener != null)
+                    mListener.onNextPressed(this);
+                break;
+        }
     }
 
     /**
@@ -103,7 +139,8 @@ public class Housedetails extends Fragment {
      * >Communicating with Other Fragments</a> for more information.
      */
     public interface OnFragmentInteractionListener {
-        // TODO: Update argument type and name
-        void onFragmentInteraction(Uri uri);
+        void onBackPressed(Fragment fragment);
+
+        void onNextPressed(Fragment fragment);
     }
 }

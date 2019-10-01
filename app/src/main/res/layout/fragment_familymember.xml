@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
-    tools:context=".tenant"
+    tools:context=".Familymember"
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -26,10 +26,11 @@
             android:id="@+id/member_name"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.5">
+            app:layout_constraintTop_toTopOf="parent">
 
             <EditText
                 android:id="@+id/et_member_name"
@@ -46,12 +47,13 @@
             android:id="@+id/member_age"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
             app:layout_constraintBottom_toBottomOf="@+id/member_name"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/member_name"
-            app:layout_constraintTop_toTopOf="@+id/member_name"
-            app:layout_constraintWidth_percent="0.5">
+            app:layout_constraintTop_toTopOf="@+id/member_name">
 
             <EditText
                 android:id="@+id/et_member_age"
@@ -70,7 +72,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/member_name"
-            app:layout_constraintWidth_percent="0.5">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline">
 
             <EditText
                 android:id="@+id/et_member_occupation"
@@ -91,7 +95,9 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/member_occupation"
             app:layout_constraintTop_toTopOf="@+id/member_occupation"
-            app:layout_constraintWidth_percent="0.5">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline">
 
             <EditText
                 android:id="@+id/et_member_edu"
@@ -110,7 +116,9 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/member_occupation"
-            app:layout_constraintWidth_percent="0.5">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline">
 
             <EditText
                 android:id="@+id/et_member_relation"
@@ -130,7 +138,9 @@
             app:layout_constraintBottom_toBottomOf="@+id/member_relation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/member_relation"
-            app:layout_constraintWidth_percent="0.5">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline">
 
             <EditText
                 android:id="@+id/et_member_bloodgrp"
@@ -143,24 +153,19 @@
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
+        <Spinner
             android:id="@+id/member_religion"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="5dp"
+            android:entries="@array/religionspinner"
+            android:prompt="@string/religion_prompt"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/member_bloodgrp"
-            app:layout_constraintWidth_percent="0.5">
-
-            <EditText
-                android:id="@+id/et_member_religion"
-                android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
-                android:hint="@string/religion"
-                android:inputType="text"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textColor="#ff000000" />
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/member_bloodgrp" />
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/member_spouse"
@@ -169,7 +174,9 @@
             app:layout_constraintBottom_toBottomOf="@+id/member_religion"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@+id/member_religion"
-            app:layout_constraintWidth_percent="0.5">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@+id/guideline">
 
             <EditText
                 android:id="@+id/et_member_spouse"
@@ -186,6 +193,7 @@
             android:id="@+id/backBT"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="11dp"
             android:text="@string/back"
             android:textColor="@color/white"
             app:layout_constraintStart_toStartOf="parent"

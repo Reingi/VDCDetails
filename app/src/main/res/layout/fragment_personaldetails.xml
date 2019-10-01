@@ -1,18 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+<androidx.core.widget.NestedScrollView
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior"
     android:layout_marginLeft="8dp"
     android:layout_marginRight="8dp"
     tools:context=".Personaldetails">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
+        android:id="@+id/personalconstraint"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -29,36 +28,34 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/ownerimage"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
+            app:layout_constraintTop_toTopOf="@id/personalconstraint" />
 
         <com.oswaldogh89.picker.ImagePicker
             android:id="@+id/pdpicker"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/pdimagelabel">
 
         </com.oswaldogh89.picker.ImagePicker>
-
-
-
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/houseowner"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
             app:layout_constraintStart_toStartOf="@+id/pdpicker"
             app:layout_constraintTop_toBottomOf="@+id/pdpicker">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/ethouseowner"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/houseowner"
                 android:inputType="text"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -67,63 +64,53 @@
             android:id="@+id/pdage"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintWidth_percent="0.5"
-            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/houseowner">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pdage"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/age"
                 android:inputType="number"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
-        <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/pdreligion"
+        <Spinner
+            android:id="@+id/spinnermember_age"
             android:layout_width="0dp"
+            android:entries="@array/religionspinner"
+            android:prompt="@string/religion_prompt"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/pdage"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@+id/guideline"
-            app:layout_constraintTop_toTopOf="@+id/pdage"
-            app:layout_constraintWidth_percent="0.5">
-
-            <EditText
-                android:id="@+id/et_pdreligion"
-                android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
-                android:hint="@string/religion"
-                android:inputType="text"
-                android:maxLength="2"
-                android:singleLine="true"
-                android:textColor="#ff000000" />
-
-        </com.google.android.material.textfield.TextInputLayout>
+            app:layout_constraintTop_toBottomOf="@+id/houseowner"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/pdedu"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/pdage"
-            app:layout_constraintWidth_percent="0.5">
+            >
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pd_edu"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/eduqualifi"
                 android:inputType="text"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -132,19 +119,19 @@
             android:id="@+id/pd_occupation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="198dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/pdedu"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/pdedu"
-            app:layout_constraintWidth_percent="0.5">
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
+            app:layout_constraintTop_toTopOf="@+id/pdedu">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pd_occupation"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/occupation"
                 android:inputType="text"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -153,19 +140,18 @@
             android:id="@+id/pdfathername"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintWidth_percent="0.5"
-            android:layout_marginEnd="8dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
             app:layout_constraintEnd_toStartOf="@+id/guideline"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/pd_occupation">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pdfathername"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/fathername"
                 android:inputType="text"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -174,18 +160,19 @@
             android:id="@+id/pdmother"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/pdfathername"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/pdfathername"
-            app:layout_constraintWidth_percent="0.5">
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
+            app:layout_constraintTop_toTopOf="@+id/pdfathername">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pd_mothername"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/mothername"
                 android:inputType="text"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -194,17 +181,18 @@
             android:id="@+id/pdgrandfather"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/pdfathername"
-            app:layout_constraintWidth_percent="0.5">
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/pdfathername">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pd_grandfather"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
-                android:hint="@string/mothername"
+                android:layout_height="wrap_content"
+                android:hint="@string/grandfathername"
                 android:inputType="text"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -213,18 +201,19 @@
             android:id="@+id/pdspouse"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
             app:layout_constraintBottom_toBottomOf="@+id/pdgrandfather"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/pdgrandfather"
-            app:layout_constraintWidth_percent="0.5">
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
+            app:layout_constraintTop_toTopOf="@+id/pdgrandfather">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pd_spouse"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/spousename"
                 android:inputType="text"
-                android:maxLength="2"
                 android:singleLine="true"
                 android:textColor="#ff000000" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -235,7 +224,7 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/isabroad"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/pdspouse" />
 
         <RadioGroup
@@ -243,20 +232,22 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/textView">
 
             <RadioButton
+                android:id="@+id/yes"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:checked="true"
                 android:text="@string/npyes" />
 
             <RadioButton
+                android:id="@+id/no"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
+                android:checked="true"
                 android:text="@string/npno" />
         </RadioGroup>
 
@@ -264,14 +255,17 @@
             android:id="@+id/spouse_profession"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/radioGroup">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_spouse_profession"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/occupation"
                 android:inputType="text"
                 android:singleLine="true" />
@@ -282,14 +276,17 @@
             android:id="@+id/abroadfrom"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
+            android:visibility="gone"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_margin="5dp"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/spouse_profession">
 
-            <EditText
+            <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/et_pd_spouse_from"
                 android:layout_width="fill_parent"
-                android:layout_height="40.0dip"
+                android:layout_height="wrap_content"
                 android:hint="@string/abroadfrom"
                 android:inputType="text"
                 android:maxLength="10"
@@ -303,7 +300,7 @@
             android:text="@string/back"
             android:textColor="@color/white"
             android:visibility="gone"
-            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintStart_toStartOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/abroadfrom" />
 
         <Button
@@ -312,9 +309,9 @@
             android:layout_height="wrap_content"
             android:text="@string/next"
             android:textColor="@color/white"
-            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/personalconstraint"
             app:layout_constraintTop_toBottomOf="@+id/abroadfrom" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+</androidx.core.widget.NestedScrollView>
