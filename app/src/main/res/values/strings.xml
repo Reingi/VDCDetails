@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VDC</string>
+    <string name="app_name">वडा न ४</string>
 
     <string name="username">USERNAME</string>
     <string name="pass">PASSWORD</string>
@@ -55,6 +55,7 @@
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
+    <string name="name">नाम</string>
 
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
