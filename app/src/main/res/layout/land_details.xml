@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    android:id="@+id/landdetails"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<TableRow
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimary"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="टोल"
+        android:textSize="14sp"
+        android:textColor="#fff"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="घर न"
+        android:textSize="14sp"
+        android:textColor="#fff"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="घरको किसिम"
+        android:textSize="14sp"
+        android:textColor="#fff"
+        android:layout_weight="1"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="जग्गाको क्षेत्रफल "
+        android:textSize="14sp"
+        android:textColor="#fff"
+        android:layout_weight="1"
+        />
+</TableRow>
+    <TableRow>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="आठ"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="१०१२"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:id="@+id/housetype"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="अर्ध पक्कि"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="१ रोपनी"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            />
+
+    </TableRow>
+
+</TableLayout>
