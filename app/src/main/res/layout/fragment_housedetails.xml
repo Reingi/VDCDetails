@@ -108,7 +108,7 @@
             android:singleLine="true" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
+ <!--   <TextView
         android:id="@+id/tvuploadvdcimage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -126,7 +126,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvuploadvdcimage">
 
-    </com.oswaldogh89.picker.ImagePicker>
+    </com.oswaldogh89.picker.ImagePicker>-->
 
     <Button
         android:id="@+id/backBT"
@@ -135,7 +135,7 @@
         android:text="@string/back"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wardimgpicker" />
+        app:layout_constraintTop_toBottomOf="@+id/aboutland" />
 
     <Button
         android:id="@+id/nextBT"
@@ -144,6 +144,6 @@
         android:text="@string/next"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/wardimgpicker" />
+        app:layout_constraintTop_toBottomOf="@+id/aboutland" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

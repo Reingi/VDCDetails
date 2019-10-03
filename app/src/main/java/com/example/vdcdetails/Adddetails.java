@@ -1,6 +1,8 @@
 package com.example.vdcdetails;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.badoualy.stepperindicator.StepperIndicator;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Adddetails extends AppCompatActivity implements Personaldetails.OnFragmentInteractionListener, Housedetails.OnFragmentInteractionListener, Familymember.OnFragmentInteractionListener{
 
@@ -24,6 +27,28 @@ public class Adddetails extends AppCompatActivity implements Personaldetails.OnF
         protected void onCreate(Bundle savedInstanceState) {
             super.onCreate(savedInstanceState);
             setContentView(R.layout.activity_adddetails);
+
+            final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.nav_view);
+            navigation.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+                @Override
+                public void onNavigationItemReselected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.navhome:
+                            Intent intent = new Intent(getApplicationContext(),MainView.class);
+                            startActivity(intent);
+                            break;
+                            //return true;
+                        case R.id.navlogout:
+                            Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
+                            startActivity(intent1);
+                            break;
+                        case R.id.navadd:
+                            Intent intent2 = new Intent(getApplicationContext(),Adddetails.class);
+                            startActivity(intent2);
+                            break;
+                    }
+                }
+            });
 
             mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 

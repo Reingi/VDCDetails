@@ -19,14 +19,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
         login = findViewById(R.id.login_button);
         user = (TextInputEditText) findViewById(R.id.username);
         pass = (TextInputEditText) findViewById(R.id.password);
 
-
-
         login.setOnClickListener(new View.OnClickListener() {
-
             String username = user.getText().toString();
             String password = pass.getText().toString();
 
