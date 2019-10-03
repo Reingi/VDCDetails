@@ -68,7 +68,7 @@ public class PersonDetailsAdapter extends RecyclerView.Adapter<PersonDetailsAdap
                 @Override
                 public void onClick(View view) {
                     int position = getAdapterPosition();
-                    //System.out.println("clicked on "+position);
+                    System.out.println("clicked on "+position);
                     AppCompatActivity activity = (AppCompatActivity) view.getContext();
                     SingleDetail details = new SingleDetail();
                     activity.getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, details).addToBackStack(null).commit();
