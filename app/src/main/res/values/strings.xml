@@ -6,7 +6,7 @@
     <string name="back">BACK</string>
     <string name="next">NEXT</string>
     <string name="save">SAVE</string>
-    <string name="login">LOGIN</string>
+    <string name="login">प्रवेस गर्नुहोस</string>
 
 
     <string name="phoneno">Phone No</string>
@@ -38,6 +38,7 @@
     <string name="aboutland">जग्गाको विवरण</string>
     <string name="naam">नाम</string>
     <string name="relation">घर मुली संगको नाता</string>
+    <string name="parent_relation">नाता</string>
     <string name="vdc_image">वडाको नक्सा अपलोड गर्नुहोस्</string>
 
 
@@ -65,8 +66,8 @@
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_dashboard">ActivityDashboard</string>
     <string name="title_home">मुख्य पृष्ठ</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="logout">निस्किनुहोस</string>
+    <string name="addmore">थप गर्नुहोस</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string-array name="religionspinner">
         <item>बौद्ध</item>

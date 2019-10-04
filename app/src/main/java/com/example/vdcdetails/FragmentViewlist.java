@@ -73,6 +73,10 @@ public class FragmentViewlist extends Fragment {
         personList.add(new PersonDetails("जित बहादुर मगर","कृष्ण बहादुर मगर","माया मगर",R.drawable.person));
         personList.add(new PersonDetails("जित बहादुर मगर","कृष्ण बहादुर मगर","माया मगर",R.drawable.person));
         personList.add(new PersonDetails("जित बहादुर मगर","कृष्ण बहादुर मगर","माया मगर",R.drawable.person));
+        personList.add(new PersonDetails("जित बहादुर मगर","कृष्ण बहादुर मगर","माया मगर",R.drawable.person));
+        personList.add(new PersonDetails("जित बहादुर मगर","कृष्ण बहादुर मगर","माया मगर",R.drawable.person));
+        personList.add(new PersonDetails("जित बहादुर मगर","कृष्ण बहादुर मगर","माया मगर",R.drawable.person));
+        personList.add(new PersonDetails("जित बहादुर मगर","कृष्ण बहादुर मगर","माया मगर",R.drawable.person));
 
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_viewlist, container, false);

@@ -29,7 +29,30 @@ public class Adddetails extends AppCompatActivity implements Personaldetails.OnF
             setContentView(R.layout.activity_adddetails);
 
             final BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.nav_view);
-            navigation.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
+
+            navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    switch (item.getItemId()) {
+                        case R.id.navhome:
+                            Intent intent = new Intent(getApplicationContext(),MainView.class);
+                            startActivity(intent);
+                            return true;
+                        //return true;
+                        case R.id.navlogout:
+                            Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
+                            startActivity(intent1);
+                            return true;
+                        case R.id.navadd:
+                            navigation.setActivated(true);
+                            Intent intent2 = new Intent(getApplicationContext(),Adddetails.class);
+                            startActivity(intent2);
+                            return true;
+                    }
+                    return false;
+                }
+            });
+            /*navigation.setOnNavigationItemReselectedListener(new BottomNavigationView.OnNavigationItemReselectedListener() {
                 @Override
                 public void onNavigationItemReselected(@NonNull MenuItem item) {
                     switch (item.getItemId()) {
@@ -43,12 +66,13 @@ public class Adddetails extends AppCompatActivity implements Personaldetails.OnF
                             startActivity(intent1);
                             break;
                         case R.id.navadd:
+                            navigation.setActivated(true);
                             Intent intent2 = new Intent(getApplicationContext(),Adddetails.class);
                             startActivity(intent2);
                             break;
                     }
                 }
-            });
+            });*/
 
             mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 

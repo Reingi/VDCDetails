@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".MainActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/singledetailconstraint"
         android:layout_width="match_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="match_parent">
 
         <de.hdodenhof.circleimageview.CircleImageView
             android:id="@+id/profile_image"
@@ -237,7 +238,6 @@
                     app:layout_constraintTop_toBottomOf="@+id/tvagedt"
                     app:layout_constraintVertical_bias="1.0" />
 
-
                 <TextView
                     android:id="@+id/occupationdt"
                     android:layout_width="wrap_content"
@@ -268,7 +268,6 @@
             android:id="@+id/lands"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:animationDuration="300"
             android:layout_margin="15dp"
             app:expandOnClick="true"
             app:elevation="8dp"
@@ -283,16 +282,16 @@
             android:id="@+id/family"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:animationDuration="300"
             android:layout_margin="15dp"
             app:expandOnClick="true"
             app:elevation="8dp"
             app:inner_view="@layout/family_details"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/lands"
             app:startExpanded="false"
             app:title="पारिवारिक विविरण" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
-</ScrollView>
+
+</androidx.core.widget.NestedScrollView>
