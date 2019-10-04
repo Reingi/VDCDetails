@@ -1,3 +1,3 @@
 # VDCDetails
 
-                                                        New Nepal government project
+                                                  New Nepal government project
