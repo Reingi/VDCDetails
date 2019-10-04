@@ -2,4 +2,6 @@
 
                                                   New Nepal government project
                                                   
-                                                  ![Screenshot](Screenshot_1570172505.png)
+                                                 <p align="center">
+  <img src="Screenshot_1570172505.png" width="350" title="hover text">
+</p>
